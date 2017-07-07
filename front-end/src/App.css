@@ -1,24 +1,79 @@
 .App {
-  text-align: center;
+
+}
+
+.btn-taco{
+  background-color: #44d1b0;
+  color: #4b4b4b;
+}
+
+.btn-notco{
+  background-color: #B1A2CC; 
+  color: #4b4b4b;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 2s linear;
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.colors {
+  color: #715e90;
 }
+
+.App-header {
+  background-color: #4b4b4b;
+  height: 150px;
+  padding-top: 20px;
+  color: #53FFD6;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/*@keyframes App-logo-spin {
+  0% { transform: rotate(0deg) translateX(0); }
+  50% { transform: rotate(9000deg) translateX(100%); }
+  100% { transform: rotate(0deg) translateX(0); }
+}*/
+
+body {
+  color: #4B4B4B;
 }
+
+li {
+  list-style-type: none;
+  text-align: center;
+}
+
+li:nth-child(odd){
+  left: 0;
+  animation: l2r infinite 30s linear;
+  color: #44d1b0;
+}
+
+li:nth-child(even){
+  right: 0;
+  animation: r2l infinite 30s linear;
+  color: #715e90;
+}
+
+/*@keyframes l2r {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(100px,0); }
+  50% { transform: translate(100px,35px); }
+  75% { transform: translate(0, 35px); }
+  100% { transform: translate(0, 0); } 
+}
+
+@keyframes r2l {
+  0% { transform: translate(100px,0); }
+  25% { transform: translate(100px,25px); }
+  50% { transform: translate(0,25px); }
+  75% { transform: translate(0, 0); }
+  100% { transform: translate(100px, 0); } 
+}*/

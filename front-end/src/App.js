@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './Home';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Delete from './Delete';
+import Header from './Header';
+import Edit from './Edit';
+import Desc from './Desc';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+class ToDo extends Component {
+	render() {
+		return (
+			<Router>
+				<div className="App">
+					<Header />
+					<Route exact path='/' component={Home} />
+					<Route path='/task/delete/:taskId' component={Delete} />
+					<Route path='/task/edit/:taskId' component={Edit} />
+					<Route path='/task/desc/:taskId' component={Desc} />
+				</div>
+			</Router> 
+		);
+	}
 }
 
-export default App;
+export default ToDo;
