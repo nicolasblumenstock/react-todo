@@ -52,13 +52,13 @@ li {
 
 li:nth-child(odd){
   left: 0;
-  animation: l2r infinite 30s linear;
+  animation: l2r infinite 10s linear;
   color: #44d1b0;
 }
 
 li:nth-child(even){
   right: 0;
-  animation: r2l infinite 30s linear;
+  animation: r2l infinite 10s linear;
   color: #715e90;
 }
 
