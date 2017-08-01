@@ -50,20 +50,20 @@ class Home extends Component{
 		var theTaskArray = [];
 		this.state.theTasks.map((tasks,index)=>{
 			theTaskArray.push(
-					<li key={index}>
-						<Link to={`/task/desc/${tasks.id}`}>{tasks.taskName}</Link> | 
-						<Link to={`/task/edit/${tasks.id}`}>Edit</Link> | 
-						<Link to={`/task/delete/${tasks.id}`}>Delete</Link>
-					</li>
+					<tr key={index}>
+						<td><Link to={`/task/desc/${tasks.id}`}>{tasks.taskName}</Link></td> 
+						<td><Link to={`/task/edit/${tasks.id}`}>Edit</Link></td>
+						<td><Link to={`/task/delete/${tasks.id}`}>Delete</Link></td>
+					</tr>
 			)
 			return 'boo'
 		})		
 		return(
 			<div className='add-box'>
 			<AddTask task={this.addTask} />
-			<ul>
+			<table className='table'>
 				{theTaskArray}
-			</ul>
+			</table>
 			</div>
 
 		)
